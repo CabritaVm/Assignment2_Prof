@@ -1,0 +1,11 @@
+
+
+begin mrbayes;
+ set autoclose=yes;
+ outgroup $sp;
+ mcmcp ngen=1000000 printfreq=1000 samplefreq=100 diagnfreq=1000 nchains=4 savebrlens=yes filename=mb_test;
+ mcmc;
+ sumt filename=mb_test;
+end;
+
+
